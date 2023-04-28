@@ -1,0 +1,61 @@
+.header {
+  background-color: rgb(175, 168, 160);
+}
+
+.header-container {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+/* menu ------------------------------------------------------ */
+.menu-head {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .menu {
+    background-color: aqua;
+    position: relative;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .menu::after {
+    content: '';
+    /* position: absolute; */
+    /* top: 0;
+    right: 0; */
+    width: 13px;
+    height: 9px;
+    background-image: url(../img/drop-arrow.svg);
+    transition: all 0.2s ease 0s;
+  }
+  .menu-head {
+    display: block;
+    background-color: aqua;
+  }
+  .menu-body {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: blanchedalmond;
+    width: 100px;
+    height: 0;  
+  }
+  .menu:hover .menu-body {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  .menu:hover::after{
+    transform: rotate(180deg);
+  }
+}
